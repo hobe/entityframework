@@ -14,6 +14,7 @@ namespace Inheritance.Model
         public SampleDbContext()
             : base("name=MyDbContext")
         {
+            //Database.SetInitializer<SampleDbContext>(new DropCreateDatabaseAlways<SampleDbContext>());
             Database.SetInitializer<SampleDbContext>(new MyDbConfigInitializer());
         }
 
